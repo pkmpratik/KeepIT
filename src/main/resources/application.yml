@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: keepit
+  data:
+    mongodb:
+      uri: ${MONGO_URI}
+      database: keepit
+      auto-index-creation: true
+  security:
+    user:
+      name: pkm
+      password: pkm
+#  devtools:
+#    livereload:
+#      enabled: true
+#    restart:
+#      enabled: true
+#      additional-paths: src/main/java
+#      exclude: static/**,templates/**
+#      poll-interval: 1s
+#      quiet-period: 400ms
