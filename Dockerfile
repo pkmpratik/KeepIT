@@ -2,9 +2,9 @@ FROM maven:3.9.7 AS build_stage
 WORKDIR "/app"
 COPY .mvn .mvn
 COPY mvnw mvnw
+RUN chmod +x mvnw
 COPY pom.xml pom.xml
 COPY src src
-RUN chmod +x mvnw
 RUN ./mvnw package -DskipTests
 
 FROM openjdk:21
